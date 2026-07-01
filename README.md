@@ -300,6 +300,23 @@ mvn spring-boot:run
 
 ---
 
+## ✨ User Interface
+
+The application provides a clean, responsive, and user-friendly interface built with **Thymeleaf, HTML, CSS, JavaScript, and Bootstrap**.
+
+### UI Features
+
+- 🔐 Professional Login Page
+- 📝 Professional Registration Page
+- 📂 Secure Dashboard
+- 🛡️ Custom Application Header with Logo
+- 🚪 Logout Functionality
+- 📋 One-Click Copy Share Link
+- 📱 Responsive Design
+- 🎨 Modern Glassmorphism UI
+
+---
+
 ## 🔮 Future Enhancements
 
 - Refresh Token Support
