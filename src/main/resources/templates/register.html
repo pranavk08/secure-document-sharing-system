@@ -13,10 +13,28 @@
 </head>
 
 <body>
+<header class="top-header">
 
-<div class="card-box">
+    <div class="logo-section">
+
+        <img th:src="@{/image/secure_logo.png}"
+             alt="Secure Logo"
+             class="secure_logo">
+
+        <h3>Secure Client Portal</h3>
+
+    </div>
+
+</header>
+
+<div class="login-container">
+
+    <div class="card-box">
 
     <h2>📝 Register</h2>
+    <p class="login-subtitle">
+  		  Create your secure account to access the portal
+	</p>
 
     <input type="text"
            id="username"
@@ -42,6 +60,7 @@
         Already have account?
         <a href="/">Login</a>
     </p>
+    </div>
 
 </div>
 

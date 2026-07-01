@@ -1,3 +1,7 @@
+/* ===========================
+   Global Styles
+=========================== */
+
 *{
     margin:0;
     padding:0;
@@ -8,74 +12,345 @@
 body{
     min-height:100vh;
     background:linear-gradient(135deg,#667eea,#764ba2);
+}
+
+/* ===========================
+   Header
+=========================== */
+
+.top-header{
+
+    width:100%;
+    height:65px;
+
+    background: linear-gradient(90deg, #FFFFFF, #F8F9FA);
+
     display:flex;
-    justify-content:center;
     align-items:center;
-    padding:20px;
+    justify-content:space-between;
+
+    padding:0 35px;
+
+    box-shadow:0 4px 12px rgba(0,0,0,.25);
+
 }
 
-.card-box{
-    width:420px;
-    background:rgba(255,255,255,0.15);
-    backdrop-filter:blur(10px);
+.logo-section{
+
+    display:flex;
+    align-items:center;
+    gap:15px;
+
+}
+
+.secure_logo{
+
+    width:48px;
+    height:48px;
+
+    object-fit:contain;
+
+    background:white;
+
+    border-radius:50%;
+
+    padding:4px;
+
+}
+
+.logo-section h3{
+
+    color:black;
+
+    font-size:24px;
+
+    font-weight:bold;
+
+    margin:0;
+
+}
+
+/* ===========================
+   Dashboard Container
+=========================== */
+
+.dashboard-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:flex-start;
+
+    padding:40px 20px;
+
+}
+
+/* ===========================
+   Dashboard Card
+=========================== */
+
+.dashboard-box{
+
+    width:750px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(12px);
+
     border-radius:20px;
+
     padding:40px;
-    box-shadow:0 8px 32px rgba(0,0,0,0.2);
+
+    box-shadow:0 10px 35px rgba(0,0,0,.25);
+
     color:white;
+
 }
 
-.card-box h2{
+.dashboard-box h2{
+
     text-align:center;
-    margin-bottom:30px;
+
+    margin-bottom:35px;
+
+    font-weight:bold;
+
 }
+
+/* ===========================
+   Section
+=========================== */
+
+.section-title{
+
+    font-size:22px;
+
+    font-weight:bold;
+
+    margin-top:25px;
+
+    margin-bottom:15px;
+
+}
+
+/* ===========================
+   Form
+=========================== */
 
 .form-control{
-    height:50px;
-    border:none;
+
+    height:52px;
+
     border-radius:12px;
-    margin-bottom:20px;
+
+    border:none;
+
+    margin-bottom:18px;
+
 }
 
+/* ===========================
+   Buttons
+=========================== */
+
 .btn-custom{
+
     width:100%;
-    height:50px;
+
+    height:52px;
+
     border:none;
+
     border-radius:12px;
+
     background:white;
-    color:#5a67d8;
-    font-size:18px;
+
+    color:#5d45ff;
+
+    font-size:17px;
+
     font-weight:bold;
-    transition:0.3s;
+
+    transition:.3s;
+
+    cursor:pointer;
+
 }
 
 .btn-custom:hover{
-    transform:scale(1.02);
+
+    background:#f3f3f3;
+
+    transform:translateY(-2px);
+
 }
 
-.dashboard-box{
-    width:750px;
-    background:rgba(255,255,255,0.15);
-    backdrop-filter:blur(10px);
-    border-radius:20px;
-    padding:40px;
-    box-shadow:0 8px 32px rgba(0,0,0,0.2);
-    color:white;
-}
+/* ===========================
+   Alerts
+=========================== */
 
-.section-title{
+.alert{
+
     margin-top:20px;
-    margin-bottom:15px;
-    font-size:22px;
-    font-weight:bold;
+
+    border-radius:12px;
+
 }
+
+/* ===========================
+   Links
+=========================== */
 
 a{
+
     color:white;
+
     font-weight:bold;
+
     text-decoration:none;
+
+}
+
+a:hover{
+
+    text-decoration:underline;
+
+}
+
+/* ===========================
+   Login / Register Card
+=========================== */
+
+.card-box{
+
+    width:420px;
+
+    background:rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+
+    border-radius:20px;
+
+    padding:40px;
+
+    color:white;
+
+    box-shadow:0 8px 30px rgba(0,0,0,.25);
+
+}
+
+
+.logout-btn{
+
+    background:#dc3545;
+
+    color:white;
+
+    border:none;
+
+    padding:10px 20px;
+
+    border-radius:8px;
+
+    font-size:15px;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.logout-btn:hover{
+
+    background:#bb2d3b;
+
+}
+
+
+
+.card-box h2{
+
+    text-align:center;
+
+    margin-bottom:30px;
+
 }
 
 p{
-    margin-top:20px;
+
     text-align:center;
+
+    margin-top:20px;
+
+}
+
+/* ===========================
+   Login Container
+=========================== */
+
+.login-container{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-height:calc(100vh - 65px);
+
+    padding:30px;
+
+}
+
+.login-subtitle{
+
+    text-align:center;
+
+    color:#f8f9fa;
+
+    margin-top:-10px;
+
+    margin-bottom:25px;
+
+    font-size:15px;
+
+}
+
+/* ===========================
+   Responsive
+=========================== */
+
+@media(max-width:768px){
+
+.dashboard-box{
+
+    width:100%;
+
+    padding:25px;
+
+}
+
+.top-header{
+
+    padding:0 20px;
+
+}
+
+.logo-section h3{
+
+    font-size:20px;
+
+}
+
+.secure_logo{
+
+    width:55px;
+
+    height:55px;
+
+}
+
 }

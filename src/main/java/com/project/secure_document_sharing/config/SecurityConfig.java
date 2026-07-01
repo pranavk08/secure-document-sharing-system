@@ -44,13 +44,14 @@ public class SecurityConfig {
 
             .authorizeHttpRequests(auth -> auth
 
-                .requestMatchers(
-                    "/",
-                    "/register",
-                    "/dashboard",
-                    "/css/**",
-                    "/js/**"
-                ).permitAll()
+            		.requestMatchers(
+            			    "/",
+            			    "/register",
+            			    "/dashboard",
+            			    "/css/**",
+            			    "/js/**",
+            			    "/image/**"
+            			).permitAll()
 
                 .requestMatchers(
                     HttpMethod.OPTIONS,

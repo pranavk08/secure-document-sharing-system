@@ -3,7 +3,7 @@
 
 <head>
 
-    <title>Login</title>
+    <title>Secure Login</title>
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
           rel="stylesheet">
@@ -14,76 +14,117 @@
 
 <body>
 
-<div class="card-box">
+    <!-- ================= HEADER ================= -->
 
-    <h2>🔐 Secure Login</h2>
+    <header class="top-header">
 
-    <input type="text"
-           id="username"
-           class="form-control"
-           placeholder="Username">
+        <div class="logo-section">
 
-    <input type="password"
-           id="password"
-           class="form-control"
-           placeholder="Password">
+            <img th:src="@{/image/secure_logo.png}"
+                 alt="Secure Logo"
+                 class="secure_logo">
 
-    <button class="btn-custom"
-            onclick="loginUser()">
-        Login
-    </button>
+            <h3>Secure Client Portal</h3>
 
-    <p>
-        Don't have account?
-        <a href="/register">Register</a>
-    </p>
+        </div>
 
-</div>
+    </header>
 
-<script>
+    <!-- ================= LOGIN ================= -->
 
-async function loginUser(){
+    <div class="login-container">
 
-    const username =
-        document.getElementById("username").value;
+        <div class="card-box">
 
-    const password =
-        document.getElementById("password").value;
+            <h2>🔐 Secure Login</h2>
 
-    const response = await fetch("/api/auth/login",{
+            <p class="login-subtitle">
+                Access your secure document sharing portal
+            </p>
 
-        method:"POST",
+            <input type="text"
+                   id="username"
+                   class="form-control"
+                   placeholder="Username">
 
-        headers:{
-            "Content-Type":"application/json"
-        },
+            <input type="password"
+                   id="password"
+                   class="form-control"
+                   placeholder="Password">
 
-        body:JSON.stringify({
-            username:username,
-            password:password
-        })
-    });
+            <button class="btn-custom"
+                    onclick="loginUser()">
 
-    const data = await response.json();
+                Login
 
-    if(response.ok){
+            </button>
 
-        localStorage.setItem(
-            "token",
-            data.accessToken
-        );
+            <p>
 
-        alert("Login Successful");
+                Don't have an account?
 
-        window.location.href="/dashboard";
+                <a href="/register">
 
-    }else{
+                    Register
 
-        alert("Invalid Credentials");
+                </a>
+
+            </p>
+
+        </div>
+
+    </div>
+
+    <script>
+
+    async function loginUser(){
+
+        const username =
+            document.getElementById("username").value;
+
+        const password =
+            document.getElementById("password").value;
+
+        const response = await fetch("/api/auth/login",{
+
+            method:"POST",
+
+            headers:{
+                "Content-Type":"application/json"
+            },
+
+            body:JSON.stringify({
+
+                username:username,
+                password:password
+
+            })
+
+        });
+
+        const data = await response.json();
+
+        if(response.ok){
+
+            localStorage.setItem(
+                "token",
+                data.accessToken
+            );
+
+            alert("Login Successful");
+
+            window.location.href="/dashboard";
+
+        }else{
+
+            alert("Invalid Credentials");
+
+        }
+
     }
-}
 
-</script>
+    </script>
 
 </body>
+
 </html>
