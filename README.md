@@ -339,8 +339,7 @@ Angadi Institute of Technology & Management (AITM)
 
 ### Connect with Me
 
-- LinkedIn: https://linkedin.com/in/your-profile
-- GitHub: https://github.com/your-username
+- LinkedIn: https://www.linkedin.com/in/pranav-kamble-a29560255/
 
 ---
 
